@@ -102,7 +102,7 @@
             btnEdit.TabIndex = 2;
             btnEdit.Text = "Edit Pet";
             btnEdit.UseVisualStyleBackColor = false;
-            btnEdit.Click += btnEdit_Click_1;
+            btnEdit.Click += btnEdit_Click;
             // 
             // MainForm
             // 

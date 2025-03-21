@@ -1,3 +1,14 @@
+//My intended direction with this was to have the form write to
+//the csv file. Unfortunately with my broken computer snafoo I lost
+//alot of research time. Please accept my humble offering with my
+//gratitude. Also, my computer doesn't want to build this anymore
+//even though it said I have no problems, so I can't keep running
+//it to test it on my machine.  I am working with the grant
+//department to get a different laptop for next quarter! 
+//Thank you!!   Sabra :)
+
+
+
 namespace FinalProject111
 {
     public partial class MainForm : Form
@@ -61,7 +72,8 @@ namespace FinalProject111
             _petForm.Show();
         }
 
-        public void dgvPets_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvPets_CellContentClick
+            (object sender, DataGridViewCellEventArgs e)
         {
             btnEdit.Visible = true;
             ReloadDataGrid();
