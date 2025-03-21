@@ -31,11 +31,12 @@
             components = new System.ComponentModel.Container();
             btnNew = new Button();
             dgvPets = new DataGridView();
-            petBindingSource = new BindingSource(components);
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             speciesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             colorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ageDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            petBindingSource = new BindingSource(components);
+            btnEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPets).BeginInit();
             ((System.ComponentModel.ISupportInitialize)petBindingSource).BeginInit();
             SuspendLayout();
@@ -64,10 +65,6 @@
             dgvPets.Size = new Size(443, 251);
             dgvPets.TabIndex = 1;
             // 
-            // petBindingSource
-            // 
-            petBindingSource.DataSource = typeof(Pet);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -92,11 +89,27 @@
             ageDataGridViewTextBoxColumn.HeaderText = "Age";
             ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
             // 
+            // petBindingSource
+            // 
+            petBindingSource.DataSource = typeof(Pet);
+            // 
+            // btnEdit
+            // 
+            btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnEdit.Location = new Point(299, 12);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(75, 23);
+            btnEdit.TabIndex = 2;
+            btnEdit.Text = "Edit Pet";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click_1;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(467, 312);
+            Controls.Add(btnEdit);
             Controls.Add(dgvPets);
             Controls.Add(btnNew);
             Name = "MainForm";
@@ -115,5 +128,6 @@
         private DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private BindingSource petBindingSource;
+        private Button btnEdit;
     }
 }

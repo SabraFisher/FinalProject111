@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FinalProject111
 {
-    public partial class NewPetForm: Form
+    public partial class NewPetForm : Form
     {
         private MainForm _mainForm;
         private int PetCount;
@@ -36,7 +36,7 @@ namespace FinalProject111
         {
             if (!EntryIsValid())
             {
-                MessageBox.Show("Invalid entry, please try again."); 
+                MessageBox.Show("Invalid entry, please try again.");
                 return;
             }
 
@@ -71,7 +71,7 @@ namespace FinalProject111
                 Age = txtAge.Text,
             });
 
-            CurrentSelectionId = -1; 
+            CurrentSelectionId = -1;
             ToggleEdit(false);
         }
 
@@ -110,10 +110,10 @@ namespace FinalProject111
         {
             bool validEntry = true;
 
-            if (Validators.IsEmptyText(txtName)||Validators.IsTextNull(txtName))
+            if (Validators.IsEmptyText(txtName) || Validators.IsTextNull(txtName))
             {
-                MessageBox.Show("Pet name required. Please try again.");      
-                validEntry = false; 
+                MessageBox.Show("Pet name required. Please try again.");
+                validEntry = false;
             }
 
             if (Validators.IsEmptyText(txtSpecies) || Validators.IsTextNull(txtSpecies))
@@ -135,6 +135,11 @@ namespace FinalProject111
             }
 
             return validEntry;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearForm();
         }
     }
 }

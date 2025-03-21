@@ -30,15 +30,16 @@
         {
             lblWelcome = new Label();
             gbPet = new GroupBox();
-            lblNameHeading = new Label();
-            txtName = new TextBox();
-            txtSpecies = new TextBox();
-            lblSpeciesHeading = new Label();
-            txtColor = new TextBox();
-            lblColorHeading = new Label();
+            btnSave = new Button();
             txtAge = new TextBox();
             lblAge = new Label();
-            btnSave = new Button();
+            txtColor = new TextBox();
+            lblColorHeading = new Label();
+            txtSpecies = new TextBox();
+            lblSpeciesHeading = new Label();
+            txtName = new TextBox();
+            lblNameHeading = new Label();
+            btnClear = new Button();
             gbPet.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // 
             gbPet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbPet.AutoSize = true;
+            gbPet.Controls.Add(btnClear);
             gbPet.Controls.Add(btnSave);
             gbPet.Controls.Add(txtAge);
             gbPet.Controls.Add(lblAge);
@@ -67,68 +69,27 @@
             gbPet.Controls.Add(lblNameHeading);
             gbPet.Location = new Point(12, 41);
             gbPet.Name = "gbPet";
-            gbPet.Size = new Size(392, 194);
+            gbPet.Size = new Size(419, 202);
             gbPet.TabIndex = 0;
             gbPet.TabStop = false;
             gbPet.Text = "Pet Information";
             // 
-            // lblNameHeading
+            // btnSave
             // 
-            lblNameHeading.AutoSize = true;
-            lblNameHeading.Location = new Point(6, 30);
-            lblNameHeading.Name = "lblNameHeading";
-            lblNameHeading.Size = new Size(39, 15);
-            lblNameHeading.TabIndex = 0;
-            lblNameHeading.Text = "Name";
-            // 
-            // txtName
-            // 
-            txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtName.Location = new Point(58, 27);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(328, 23);
-            txtName.TabIndex = 1;
-            // 
-            // txtSpecies
-            // 
-            txtSpecies.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtSpecies.Location = new Point(58, 56);
-            txtSpecies.Name = "txtSpecies";
-            txtSpecies.Size = new Size(328, 23);
-            txtSpecies.TabIndex = 2;
-            // 
-            // lblSpeciesHeading
-            // 
-            lblSpeciesHeading.AutoSize = true;
-            lblSpeciesHeading.Location = new Point(6, 59);
-            lblSpeciesHeading.Name = "lblSpeciesHeading";
-            lblSpeciesHeading.Size = new Size(46, 15);
-            lblSpeciesHeading.TabIndex = 0;
-            lblSpeciesHeading.Text = "Species";
-            // 
-            // txtColor
-            // 
-            txtColor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtColor.Location = new Point(58, 85);
-            txtColor.Name = "txtColor";
-            txtColor.Size = new Size(328, 23);
-            txtColor.TabIndex = 3;
-            // 
-            // lblColorHeading
-            // 
-            lblColorHeading.AutoSize = true;
-            lblColorHeading.Location = new Point(6, 88);
-            lblColorHeading.Name = "lblColorHeading";
-            lblColorHeading.Size = new Size(36, 15);
-            lblColorHeading.TabIndex = 0;
-            lblColorHeading.Text = "Color";
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSave.Location = new Point(6, 152);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 28);
+            btnSave.TabIndex = 5;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
             // 
             // txtAge
             // 
             txtAge.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtAge.Location = new Point(58, 114);
             txtAge.Name = "txtAge";
-            txtAge.Size = new Size(328, 23);
+            txtAge.Size = new Size(355, 23);
             txtAge.TabIndex = 4;
             // 
             // lblAge
@@ -140,16 +101,66 @@
             lblAge.TabIndex = 0;
             lblAge.Text = "Age";
             // 
-            // btnSave
+            // txtColor
             // 
-            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            btnSave.Location = new Point(6, 152);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 20);
-            btnSave.TabIndex = 5;
-            btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
-            
+            txtColor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtColor.Location = new Point(58, 85);
+            txtColor.Name = "txtColor";
+            txtColor.Size = new Size(355, 23);
+            txtColor.TabIndex = 3;
+            // 
+            // lblColorHeading
+            // 
+            lblColorHeading.AutoSize = true;
+            lblColorHeading.Location = new Point(6, 88);
+            lblColorHeading.Name = "lblColorHeading";
+            lblColorHeading.Size = new Size(36, 15);
+            lblColorHeading.TabIndex = 0;
+            lblColorHeading.Text = "Color";
+            // 
+            // txtSpecies
+            // 
+            txtSpecies.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSpecies.Location = new Point(58, 56);
+            txtSpecies.Name = "txtSpecies";
+            txtSpecies.Size = new Size(355, 23);
+            txtSpecies.TabIndex = 2;
+            // 
+            // lblSpeciesHeading
+            // 
+            lblSpeciesHeading.AutoSize = true;
+            lblSpeciesHeading.Location = new Point(6, 59);
+            lblSpeciesHeading.Name = "lblSpeciesHeading";
+            lblSpeciesHeading.Size = new Size(46, 15);
+            lblSpeciesHeading.TabIndex = 0;
+            lblSpeciesHeading.Text = "Species";
+            // 
+            // txtName
+            // 
+            txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtName.Location = new Point(58, 27);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(355, 23);
+            txtName.TabIndex = 1;
+            // 
+            // lblNameHeading
+            // 
+            lblNameHeading.AutoSize = true;
+            lblNameHeading.Location = new Point(6, 30);
+            lblNameHeading.Name = "lblNameHeading";
+            lblNameHeading.Size = new Size(39, 15);
+            lblNameHeading.TabIndex = 0;
+            lblNameHeading.Text = "Name";
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(312, 156);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 23);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // NewPetForm
             // 
@@ -179,6 +190,6 @@
         private TextBox txtAge;
         private Label lblAge;
         private Button btnSave;
-        
+        private Button btnClear;
     }
 }

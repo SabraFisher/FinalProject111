@@ -9,14 +9,14 @@ namespace FinalProject111
             InitializeComponent();
             _petForm = new NewPetForm(this);
             _petList = new List<Pet>();
-            _petList.Add(new Pet 
-            { 
-                Name = "Fido", 
-                Species = "Dog", 
-                Color = "Brown", 
-                Age = "3" 
+            _petList.Add(new Pet
+            {
+                Name = "Fido",
+                Species = "Dog",
+                Color = "Brown",
+                Age = "3"
             });
-            ReloadDataGrid();            
+            ReloadDataGrid();
             dgvPets.Rows[0].Selected = true;
         }
 
@@ -28,7 +28,7 @@ namespace FinalProject111
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-             _petForm.ShowDialog();
+            _petForm.ShowDialog();
         }
 
         public void AddPet(Pet pet)
@@ -66,5 +66,7 @@ namespace FinalProject111
             btnEdit.Visible = true;
             ReloadDataGrid();
         }
+
+        
     }
 }
