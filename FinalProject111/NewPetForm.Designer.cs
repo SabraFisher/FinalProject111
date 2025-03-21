@@ -28,32 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblWelcome = new Label();
+            gbPet = new GroupBox();
+            lblNameHeading = new Label();
+            txtName = new TextBox();
+            txtSpecies = new TextBox();
+            lblSpeciesHeading = new Label();
+            txtColor = new TextBox();
+            lblColorHeading = new Label();
+            txtAge = new TextBox();
+            lblAge = new Label();
+            btnSave = new Button();
+            gbPet.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblWelcome
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(68, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWelcome.Location = new Point(12, 9);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(155, 17);
+            lblWelcome.TabIndex = 0;
+            lblWelcome.Text = "Welcome to the Family!";
+            // 
+            // gbPet
+            // 
+            gbPet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            gbPet.AutoSize = true;
+            gbPet.Controls.Add(btnSave);
+            gbPet.Controls.Add(txtAge);
+            gbPet.Controls.Add(lblAge);
+            gbPet.Controls.Add(txtColor);
+            gbPet.Controls.Add(lblColorHeading);
+            gbPet.Controls.Add(txtSpecies);
+            gbPet.Controls.Add(lblSpeciesHeading);
+            gbPet.Controls.Add(txtName);
+            gbPet.Controls.Add(lblNameHeading);
+            gbPet.Location = new Point(12, 41);
+            gbPet.Name = "gbPet";
+            gbPet.Size = new Size(392, 194);
+            gbPet.TabIndex = 0;
+            gbPet.TabStop = false;
+            gbPet.Text = "Pet Information";
+            // 
+            // lblNameHeading
+            // 
+            lblNameHeading.AutoSize = true;
+            lblNameHeading.Location = new Point(6, 30);
+            lblNameHeading.Name = "lblNameHeading";
+            lblNameHeading.Size = new Size(39, 15);
+            lblNameHeading.TabIndex = 0;
+            lblNameHeading.Text = "Name";
+            // 
+            // txtName
+            // 
+            txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtName.Location = new Point(58, 27);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(328, 23);
+            txtName.TabIndex = 1;
+            // 
+            // txtSpecies
+            // 
+            txtSpecies.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSpecies.Location = new Point(58, 56);
+            txtSpecies.Name = "txtSpecies";
+            txtSpecies.Size = new Size(328, 23);
+            txtSpecies.TabIndex = 2;
+            // 
+            // lblSpeciesHeading
+            // 
+            lblSpeciesHeading.AutoSize = true;
+            lblSpeciesHeading.Location = new Point(6, 59);
+            lblSpeciesHeading.Name = "lblSpeciesHeading";
+            lblSpeciesHeading.Size = new Size(46, 15);
+            lblSpeciesHeading.TabIndex = 0;
+            lblSpeciesHeading.Text = "Species";
+            // 
+            // txtColor
+            // 
+            txtColor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtColor.Location = new Point(58, 85);
+            txtColor.Name = "txtColor";
+            txtColor.Size = new Size(328, 23);
+            txtColor.TabIndex = 3;
+            // 
+            // lblColorHeading
+            // 
+            lblColorHeading.AutoSize = true;
+            lblColorHeading.Location = new Point(6, 88);
+            lblColorHeading.Name = "lblColorHeading";
+            lblColorHeading.Size = new Size(36, 15);
+            lblColorHeading.TabIndex = 0;
+            lblColorHeading.Text = "Color";
+            // 
+            // txtAge
+            // 
+            txtAge.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtAge.Location = new Point(58, 114);
+            txtAge.Name = "txtAge";
+            txtAge.Size = new Size(328, 23);
+            txtAge.TabIndex = 4;
+            // 
+            // lblAge
+            // 
+            lblAge.AutoSize = true;
+            lblAge.Location = new Point(6, 117);
+            lblAge.Name = "lblAge";
+            lblAge.Size = new Size(28, 15);
+            lblAge.TabIndex = 0;
+            lblAge.Text = "Age";
+            // 
+            // btnSave
+            // 
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSave.Location = new Point(6, 152);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 20);
+            btnSave.TabIndex = 5;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            
             // 
             // NewPetForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(735, 289);
-            Controls.Add(label1);
+            ClientSize = new Size(411, 247);
+            Controls.Add(gbPet);
+            Controls.Add(lblWelcome);
             Name = "NewPetForm";
-            Text = "NewPetForm";
+            Text = "New Pet Registration Form";
+            gbPet.ResumeLayout(false);
+            gbPet.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblWelcome;
+        private GroupBox gbPet;
+        private TextBox txtName;
+        private Label lblNameHeading;
+        private TextBox txtColor;
+        private Label lblColorHeading;
+        private TextBox txtSpecies;
+        private Label lblSpeciesHeading;
+        private TextBox txtAge;
+        private Label lblAge;
+        private Button btnSave;
+        
     }
 }
